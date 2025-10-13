@@ -2,12 +2,27 @@ body {
   background-color: #f8f9fa;
 }
 
-.homepage {
+/* .homepage {
 
+} */
+
+@font-face {
+  font-family: 'Starbim';
+  src: url('./fonts/Starbim.ttf');
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
 }
 
 .topbar h1 {
   margin-left: 20px;
+  font-family: 'Starbim';
+  color: #a0c4e2;
+  align-items: center;
 }
 
 .login-signup-buttons {
@@ -23,10 +38,80 @@ body {
   justify-content: space-between;
 }
 
-.welcomebanner {
+.welcome-banner {
   width: 100%;
-  background-color: #dee2ff;
+  background-color: #a0c4e2;
   text-align: center;
   padding: 60px 20px;
-  /* margin-top: 10px; */
+}
+
+.welcome-banner h2 {
+  color: white;
+}
+
+.welcome-banner h3 {
+  color: black;
+}
+
+.login-signup-buttons button {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 5px 15px;
+}
+
+.login:hover, .signup:hover {
+  transform: scale(1.2);
+  background-color: #a0c4e2;
+  color: white;
+}
+
+.search-bar {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 5px 30px;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.welcome-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.welcome-buttons button {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 5px 15px;
+}
+
+.quiz:hover, .browse:hover {
+  background-color: black;
+  color: white;
+}
+
+.profiles-section {
+  text-align: center;
+}
+
+.profiles {
+  display: grid;
+  padding: 15px 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.profile-card {
+  background-color: #a0c4e2;
+  border-radius: 7.5px;
+  height: 200px;
+  padding-top: 10px;
+  font-size: 15px;
 }

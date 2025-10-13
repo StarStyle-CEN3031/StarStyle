@@ -1,21 +1,59 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Login from './Login';
+import SignUp from './SignUp';
 
-function App() {
+function HomePage() {
   return (
     <div className="homepage">
       <header className="topbar">
         <h1>StarStyle</h1>
         <div className="login-signup-buttons">
-          <button className="login">Login</button>
+          <Link to="/login">
+            <button className="login">Login</button>
+          </Link>
+          <Link to="/signup">
           <button className="signup">Sign Up</button>
+          </Link>
       </div>
     </header>
-    <section className="welcomebanner">
-      <h2>Welcome!</h2>
+    <section className="welcome-banner">
+      <h2>Celebrity Style Made Affordable</h2>
+      <h3>Discover the outfits worn by your favorite celebrities and find budget-friendly alternatives to recreate their looks.</h3>
+    <input type="text" placeholder="Search by celebrity or occasion" className="search-bar"/>
+    <div className="welcome-buttons">
+      <button className="quiz">Take Style Quiz</button>
+      <button className="browse">Browse All Looks</button>
+    </div>
+    </section>
+    <section className="profiles-section">
+      <h2>Featured Collections</h2>
+      <div className="profiles">
+        <div className="profile-card">Sabrina Carpenter</div>
+        <div className="profile-card">Jenna Ortega</div>
+        <div className="profile-card">Alexandra Saint Mleux</div>
+        <div className="profile-card">Katseye</div> 
+      </div>
     </section>
     </div>
   );
 }
 
+function App() {
+  return (
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<HomePage/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<SignUp/>}/>
+    </Routes>
+    </BrowserRouter>
+  );
+}
+
 export default App;
+
+/* references:
+// www.w3schools.com/react/react_router.asp
+*/
