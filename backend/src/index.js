@@ -1,6 +1,7 @@
-const express = require('express');
-const connectDB = require('./config/mongodb');
-require('dotenv').config();
+import express from 'express';
+import cors from "cors";
+import connectDB from './config/mongodb'; //config/db.mjs
+require('dotenv').config(); //config/index.mjs
 
 const app = express();
 
