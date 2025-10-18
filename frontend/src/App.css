@@ -40,7 +40,7 @@ body {
 
 .welcome-banner {
   width: 100%;
-  background-color: #a0c4e2;
+  background-image: linear-gradient(to right, #94BBE9, #EEAECA);
   text-align: center;
   padding: 60px 20px;
 }
