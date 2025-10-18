@@ -4,12 +4,10 @@ const { Schema, model } = mongoose;
 /*source: https://www.mongodb.com/docs/drivers/node/current/integrations/mongoose-get-started/*/
 
 const userSchema = new Schema({
-    username: String,
+    uid: { type: String, required: true, unique: true},
     name: String,
-    email: String,
-    phone: String,
-    photo: Buffer,
-    styleTags: [String],
+    email: { type: String, required: true, unique: true },
+    picture: Buffer
 });
 
 const User = model('User', userSchema);

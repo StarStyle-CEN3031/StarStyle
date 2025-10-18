@@ -13,3 +13,10 @@ const serviceAccount = {
     client_x509_cert_url: config.FIREBASE_CLIENT_CERT_URL
 };
 
+const firebase = admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
+
+export default {
+    auth: firebase.auth()
+};
