@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { auth } from './config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link} from 'react-router-dom';
 import './Login.css';
 
 function Login() {
@@ -22,18 +22,21 @@ function Login() {
   };
 
   return (
-    <div className="auth-page">
-      <h2>Login!</h2>
+    <div>
+    <section className="auth_background">
+    </section>
+
+    <div>
+    <section className="auth-page">
+      <h1>User Login</h1>
       <form onSubmit={handleLogin}>
-        <label>Login with your email</label>
         <input
-          type="email"
+          type="Email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <label>Enter your password</label>
         <input
           type="password"
           placeholder="Password"
@@ -41,9 +44,16 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+        <div className="forget">
+          <text>Forget Password?</text>
+          <Link to="reset=password">Click here</Link>
+        </div>
         <button type="submit">Login</button>
       </form>
+    </section>
     </div>
+    </div>
+
   );
 }
 
