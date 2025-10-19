@@ -23,12 +23,9 @@ function Login() {
 
   return (
     <div>
-    <section className="auth_background">
-    </section>
-
-    <div>
+    <section className="auth-background"></section>
     <section className="auth-page">
-      <h1>User Login</h1>
+      <h1>Login</h1>
       <form onSubmit={handleLogin}>
         <input
           type="Email"
@@ -44,16 +41,13 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <div className="forget">
-          <text>Forget Password?</text>
-          <Link to="reset=password">Click here</Link>
+        <div className="forgot-password">
+          <Link to="reset-password">Forgot Password?</Link>
         </div>
         <button type="submit">Login</button>
       </form>
     </section>
     </div>
-    </div>
-
   );
 }
 
