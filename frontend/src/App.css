@@ -2,10 +2,6 @@ body {
   background-color: #f8f9fa;
 }
 
-/* .homepage {
-
-} */
-
 @font-face {
   font-family: 'Starbim';
   src: url('./fonts/Starbim.ttf');
@@ -21,7 +17,10 @@ body {
 .topbar h1 {
   margin-left: 20px;
   font-family: 'Starbim';
-  color: #a0c4e2;
+  background: linear-gradient(to left, #ddbdfc, #cbb2fe, #ada7ff, #8e94f2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   align-items: center;
 }
 
@@ -40,7 +39,7 @@ body {
 
 .welcome-banner {
   width: 100%;
-  background-color: #a0c4e2;
+  background: radial-gradient(circle, #ddbdfc, #cbb2fe, #ada7ff, #8e94f2);
   text-align: center;
   padding: 60px 20px;
 }
@@ -63,7 +62,7 @@ body {
 
 .login:hover, .signup:hover {
   transform: scale(1.2);
-  background-color: #a0c4e2;
+  background-color: #cbb2fe;
   color: white;
 }
 
@@ -109,7 +108,7 @@ body {
 }
 
 .profile-card {
-  background-color: #a0c4e2;
+  background-color: #cbb2fe;
   border-radius: 7.5px;
   height: 200px;
   padding-top: 10px;

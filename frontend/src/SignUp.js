@@ -21,9 +21,11 @@ function SignUp() {
     }
   };
 
-  return (
-    <div className="auth-page">
-      <h2>Create your account!</h2>
+  return ( 
+    <div>
+    <section className="auth-background"></section>
+    <section className="auth-page">
+      <h1>Create your account!</h1>
       <form onSubmit={handleSignUp}>
       <label>Enter your email</label>
         <input
@@ -43,6 +45,7 @@ function SignUp() {
         />
         <button type="submit">Sign Up</button>
       </form>
+      </section>
     </div>
   );
 }

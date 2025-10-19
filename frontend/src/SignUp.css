@@ -1,8 +1,21 @@
+.auth-background{
+    width: 100vw;
+    height: 100vh;
+    background-color: #e7ecef;
+    margin: 0;
+    display: flex;
+    position: relative;
+} 
+
 .auth-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    width: 300px;
+    height: 375px;
+    padding: 20px;
 }
 
 .auth-page form {
@@ -13,8 +26,10 @@
     gap: 10px;
 }
 
-.auth-page h2 {
-    text-align: center;
+.auth-page h1 {
+    color: black;
+    font-size: 25px;
+    top : 10%;
 }
 
 .auth-page button {
@@ -26,6 +41,7 @@
     border-radius: 5px;
     font-size: 12px;
     padding: 5px 15px;
+    margin-top: 2px;
   }
 
 .auth-page label {
@@ -34,6 +50,6 @@
   
 .auth-page button:hover {
     transform: scale(1.2);
-    background-color: #a0c4e2;
+    background-color: #c8b6ff;
     color: white;
 }
