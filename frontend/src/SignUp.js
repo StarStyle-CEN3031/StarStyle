@@ -18,7 +18,8 @@ function SignUp() {
       navigate('/');
       const token = await result.user.getIdToken();
       
-      const response = await fetch("http://localhost:5001/api/protected", {
+      // or "http://localhost:5001/api/protected"
+      const response = await fetch("https://star-style-backend-git-naydelin-teafanys-projects.vercel.app/api/protected", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
