@@ -10,9 +10,28 @@ dotenv.config(); //config/index.mjs
 
 const app = express();
 
-// Middleware
+//middleware
+// source: https://www.stackhawk.com/blog/fixing-no-access-control-allow-origin-header-present/
+const allowedOrigins = ["http://localhost:3000"];
+app.use((req, res, next) => {
+    const origin = req.headers.origin;
+    
+    if (allowedOrigins.includes(origin)) {
+        res.header('Access-Control-Allow-Origin', origin);
+    }
+
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+    if (req.method == 'OPTIONS') {
+        return res.status(200).end();
+    }
+
+    next();
+})
+
 app.use(bodyParser.json());
-app.use(cors());
 
 // Connect to MongoDB
 connectDB();
@@ -31,7 +50,10 @@ app.post("/api/protected", verifyToken, async(req, res) => {
 }); 
 
 // Health check
-app.get('/health', (req, res) => res.status(200).json({ status: 'OK' }));
+app.get('/health', (req, res) => {
+    console.log('Health route hit');
+    res.status(200).json({ status: 'OK' })
+});
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
