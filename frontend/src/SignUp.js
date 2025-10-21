@@ -8,18 +8,32 @@ function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
+  
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const result = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(result);
       alert('Account created!');
       navigate('/');
+      const token = await result.user.getIdToken();
+      
+      const response = await fetch("http://localhost:5000/api/protected", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      });
+      
+      const userData = await response.json();
+      console.log("User Data:", userData);
     } catch (error) {
       console.log(error);
       alert(error.message);
     }
   };
+
 
   return ( 
     <div>

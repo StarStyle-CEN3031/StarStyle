@@ -1,11 +1,12 @@
 import express from 'express';
 import bodyParser from "body-parser";
 import cors from "cors";
-import connectDB from './config/mongodb'; //config/db.mjs
-import verifyToken from './middleware/authenticate';
-import User from './model/User'
+import connectDB from './config/mongodb.js'; //config/db.mjs
+import verifyToken from './middleware/authenticate.js';
+import User from './model/User.js'
+import dotenv from 'dotenv';
 
-require('dotenv').config(); //config/index.mjs
+dotenv.config(); //config/index.mjs
 
 const app = express();
 
@@ -15,8 +16,6 @@ app.use(cors());
 
 // Connect to MongoDB
 connectDB();
-
-verifyToken();
 
 app.post("/api/protected", verifyToken, async(req, res) => {
     const { uid, name, email, picture } = req.user; 
