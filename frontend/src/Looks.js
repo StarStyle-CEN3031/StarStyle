@@ -1,10 +1,10 @@
-import './Quiz.css';
+import './Looks.css';
 import { useNavigate } from 'react-router-dom';
 
 function Quiz(){
     return (
         <div>
-        <section className="quiz_background"></section>
+        <section className="looks_background"></section>
         </div>
     )
 }
