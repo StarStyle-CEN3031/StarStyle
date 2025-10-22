@@ -10,7 +10,7 @@ dotenv.config(); //config/index.mjs
 
 const app = express();
 
-//middleware
+// middleware
 // source: https://www.stackhawk.com/blog/fixing-no-access-control-allow-origin-header-present/
 const allowedOrigins = ["http://localhost:3000", "https://star-style-git-naydelin-teafanys-projects.vercel.app"];
 app.use((req, res, next) => {
