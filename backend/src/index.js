@@ -10,6 +10,14 @@ dotenv.config(); //config/index.mjs
 
 const app = express();
 
+app.use(cors(
+    {
+    origin: ["https://star-style-git-naydelin-teafanys-projects.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+    }
+));
+
 app.get('/', (req, res) => {
     res.send("Hello world");
     console.log("Hello console");
@@ -17,33 +25,24 @@ app.get('/', (req, res) => {
 
 // middleware
 // source: https://www.stackhawk.com/blog/fixing-no-access-control-allow-origin-header-present/
-const allowedOrigins = ["http://localhost:3000", "https://star-style-git-naydelin-teafanys-projects.vercel.app"];
-app.use((req, res, next) => {
-    const origin = req.headers.origin;
+// const allowedOrigins = ["http://localhost:3000", "https://star-style-git-naydelin-teafanys-projects.vercel.app"];
+// app.use((req, res, next) => {
+//     const origin = req.headers.origin;
     
-    if (allowedOrigins.includes(origin)) {
-        res.header('Access-Control-Allow-Origin', origin);
-    }
+//     if (allowedOrigins.includes(origin)) {
+//         res.header('Access-Control-Allow-Origin', origin);
+//     }
 
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+//     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
 
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-    if (req.method == 'OPTIONS') {
-        return res.status(200).end();
-    }
+//     if (req.method == 'OPTIONS') {
+//         return res.status(200).end();
+//     }
 
-    next();
-})
-
-// app.use(cors({
-//     origin: ["http://localhost:3000", "https://star-style-git-naydelin-teafanys-projects.vercel.app"],
-//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     credentials: true
-// }));
-
-// app.options('*', cors());
+//     next();
+// })
 
 app.use(bodyParser.json());
 
