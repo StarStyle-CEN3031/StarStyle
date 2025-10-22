@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Login from './Login';
 import SignUp from './SignUp';
+import Quiz from './quiz';
 
 function HomePage() {
   return (
@@ -23,7 +24,9 @@ function HomePage() {
       <h3>Discover the outfits worn by your favorite celebrities and find budget-friendly alternatives to recreate their looks.</h3>
     <input type="text" placeholder="Search by celebrity or occasion" className="search-bar"/>
     <div className="welcome-buttons">
-      <button className="quiz">Take Style Quiz</button>
+      <Link to="/quiz">
+            <button className="quiz">Take Style Quiz</button>
+          </Link>
       <button className="browse">Browse All Looks</button>
     </div>
     </section>
@@ -47,6 +50,7 @@ function App() {
       <Route path='/' element={<HomePage/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<SignUp/>}/>
+      <Route path='/quiz' element={<quiz/>}/>
     </Routes>
     </BrowserRouter>
   );
