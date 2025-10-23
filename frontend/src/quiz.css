@@ -18,7 +18,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 8px 10px #c8b6ff;
-    /* removed invalid `position: center;` */
     text-align: center;
 }
 
@@ -40,26 +39,63 @@
 
 .pop-up ul li{
     display: flex;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.pop-up button{
-    display: inline-block;
-    border: 2px solid rgb(240, 175, 255);
+    border: 1px solid rgb(240, 175, 255);
     background-color: #cbb2fe;
     color: white;
     font-size: 18px;
     padding: 10px 20px;
     border-radius: 6px;
-    width: 200px;
+    margin-bottom: 12px;
+    cursor: pointer;
+     transition: background-color 0.2s ease;
 }
 
+.pop-up ul li:hover {
+    background-color: #b191f9;
+}
 .index{
     margin-top: 20px;
+}
+
+.result-screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: #d4b7ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.result-screen h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.result-screen h1{
+    font-size: 48px;
+    font-weight: bold;
+    color: #a261ff;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px #e5d4ff;
+}
+
+.result-screen button{
+    background-color: #a261ff;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 4px 5px #c8b6ff;
+}
+
+.result-screen button:hover{
+    background-color: #8d49f7;
+    transform: scale(1.05);   
 }
