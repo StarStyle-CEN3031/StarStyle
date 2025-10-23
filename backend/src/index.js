@@ -13,15 +13,11 @@ const app = express();
 app.use(cors(
     {
     origin: ["https://star-style-git-naydelin-teafanys-projects.vercel.app"],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
     }
 ));
-
-app.get('/', (req, res) => {
-    res.send("Hello world");
-    console.log("Hello console");
-})
 
 // middleware
 // source: https://www.stackhawk.com/blog/fixing-no-access-control-allow-origin-header-present/
@@ -48,6 +44,11 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 connectDB();
+
+app.get('/', (req, res) => {
+    res.send("Hello world");
+    console.log("Hello console");
+})
 
 app.post("/api/protected", verifyToken, async(req, res) => {
     const { uid, name, email, picture } = req.user; 
