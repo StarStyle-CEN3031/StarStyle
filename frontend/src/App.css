@@ -90,8 +90,8 @@ body {
   padding: 5px 15px;
 }
 
-.quiz:hover, .browse:hover {
-  background-color: black;
+.Quiz:hover, .Looks:hover {
+  background-color: #8e94f2;
   color: white;
 }
 

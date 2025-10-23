@@ -1,10 +1,10 @@
 import './Looks.css';
-import { useNavigate } from 'react-router-dom';
 
-function Quiz(){
+function Looks(){
     return (
         <div>
         <section className="looks_background"></section>
         </div>
     )
 }
+export default Looks;

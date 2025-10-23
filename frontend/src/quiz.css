@@ -6,3 +6,60 @@
     display: flex;
     position: relative;
 } 
+
+.pop-up{
+    background-color: white;
+    width: 650px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 8px 10px #c8b6ff;
+    /* removed invalid `position: center;` */
+    text-align: center;
+}
+
+.pop-up h2{
+    text-align: center;
+    margin-top: 0;
+}
+
+.pop-up hr{
+    height: 1px;
+    background: #595959;
+}
+
+.pop-up h3{
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+}
+
+.pop-up ul li{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pop-up button{
+    display: inline-block;
+    border: 2px solid rgb(240, 175, 255);
+    background-color: #cbb2fe;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 200px;
+}
+
+.index{
+    margin-top: 20px;
+}
