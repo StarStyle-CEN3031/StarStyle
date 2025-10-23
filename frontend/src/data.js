@@ -34,7 +34,7 @@ export const data = [
     },
     {    
     question: "Pick your dream fashion destination?",
-    option1: "Los Angele — sun, fun, and glam photo ops",
+    option1: "Los Angeles — sun, fun, and glam photo ops",
     option1Celebrity: "Sabrina Carpenter",
     option2: "New York City — moody streets and edgy layers",
     option2Celebrity: "Jenna Ortega",
