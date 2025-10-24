@@ -1,0 +1,132 @@
+.quiz-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e7ecef;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pop-up {
+  background-color: white;
+  max-width: 650px;
+  width: 600px;
+  height: 450px;
+  padding: 20px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 8px 10px #c8b6ff;
+  text-align: center;
+}
+
+.pop-up h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pop-up ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-up ul li {
+  display: flex;
+  margin-right: 1%;
+  margin-left: 1%;
+  align-items: center;
+  background-color: #e7ecef;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pop-up ul li:hover {
+  background-color: #cbb2fe;
+  color: white;
+}
+
+.index {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.result-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #cbb2fe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.result-screen h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.result-screen h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #a261ff;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px #e5d4ff;
+}
+
+.result-screen button {
+  background-color: #a261ff;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 4px 5px #c8b6ff;
+}
+
+.result-screen button:hover {
+  background-color: black;
+  transform: scale(1.05);
+}
+
+.result-return-link {
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.result-return-link:hover {
+  text-decoration: underline;
+}
+
+.return-link {
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.return-link:hover {
+  text-decoration: underline;
+}
