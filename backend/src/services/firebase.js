@@ -1,7 +1,9 @@
 import admin from "firebase-admin";
 import dotenv from 'dotenv';
 
-dotenv.config();
+if (process.env.NODE_ENV != "production") {
+    dotenv.config();
+}
 
 const serviceAccount = {
     project_id: process.env.FIREBASE_PROJECT_ID,

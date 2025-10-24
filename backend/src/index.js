@@ -6,7 +6,9 @@ import verifyToken from './middleware/authenticate.js';
 import User from './model/User.js'
 import dotenv from 'dotenv';
 
-dotenv.config(); //config/index.mjs
+if (process.env.NODE_ENV != "production") {
+    dotenv.config();
+}
 
 const app = express();
 
