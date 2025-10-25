@@ -84,7 +84,7 @@
   color: white;
 }
 
-.return-link {
+.return-link-on-profile {
   font-size: 12px;
   text-align: center;
   width: 100%;
@@ -97,6 +97,6 @@
   right: 0;
 }
 
-.return-link:hover {
+.return-link-on-profile:hover {
   text-decoration: underline;
 }
