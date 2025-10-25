@@ -98,7 +98,7 @@ function Profile() {
           <h2>Celebrity style match:</h2>
         </div>
         <button onClick={handleLogout}>Log Out</button>
-        <Link to="/" className="return-link">
+        <Link to="/" className="return-link-on-profile">
           Return to Home
         </Link>
       </section>
