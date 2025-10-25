@@ -8,20 +8,35 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
+  
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      alert("Account created!");
-      navigate("/");
+      const result = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(result);
+      alert('Account created!');
+      navigate('/');
+      const token = await result.user.getIdToken();
+      
+      // or "http://localhost:5001/api/protected"
+      const response = await fetch("https://starstyle-production.up.railway.app/api/protected", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      });
+      
+      const userData = await response.json();
+      console.log("User Data:", userData);
     } catch (error) {
       console.log(error);
       alert(error.message);
     }
   };
 
-  return (
+
+  return ( 
     <div>
       <section className="auth-background"></section>
       <section className="auth-page">
