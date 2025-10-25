@@ -1,14 +1,12 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import bodyParser from "body-parser";
 import cors from "cors";
 import connectDB from './config/mongodb.js'; //config/db.mjs
 import verifyToken from './middleware/authenticate.js';
 import User from './model/User.js'
-import dotenv from 'dotenv';
 
-if (process.env.NODE_ENV != "production") {
-    dotenv.config();
-}
+dotenv.config();
 
 const app = express();
 
