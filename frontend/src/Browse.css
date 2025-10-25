@@ -1,0 +1,8 @@
+.browse-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #d4b7ff;
+  margin: 0;
+  display: flex;
+  position: relative;
+}

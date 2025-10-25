@@ -3,8 +3,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Starbim';
-  src: url('./fonts/Starbim.ttf');
+  font-family: "Starbim";
+  src: url("./fonts/Starbim.ttf");
 }
 
 .topbar {
@@ -16,12 +16,20 @@ body {
 
 .topbar h1 {
   margin-left: 20px;
-  font-family: 'Starbim';
+  font-family: "Starbim";
   background: linear-gradient(to left, #ddbdfc, #cbb2fe, #ada7ff, #8e94f2);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   align-items: center;
+}
+
+.topbar-right {
+  margin-right: 10px;
+}
+
+.profile-link {
+  color: black;
 }
 
 .login-signup-buttons {
@@ -60,7 +68,7 @@ body {
   padding: 5px 15px;
 }
 
-.login:hover, .signup:hover {
+.login-signup-buttons a:hover button {
   transform: scale(1.2);
   background-color: #cbb2fe;
   color: white;
@@ -90,7 +98,8 @@ body {
   padding: 5px 15px;
 }
 
-.quiz:hover, .browse:hover {
+.quiz:hover,
+.browse:hover {
   background-color: black;
   color: white;
 }
