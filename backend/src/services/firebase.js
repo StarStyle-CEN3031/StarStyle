@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 if (process.env.NODE_ENV != "production") {
     dotenv.config();
 }
+console.log("private key:", process.env.FIREBASE_PRIVATE_KEY);
 
 const serviceAccount = {
     project_id: process.env.FIREBASE_PROJECT_ID,
