@@ -24,6 +24,14 @@ body {
   align-items: center;
 }
 
+.topbar-right {
+  margin-right: 10px;
+}
+
+.profile-link {
+  color: black;
+}
+
 .login-signup-buttons {
   display: flex;
   gap: 20px;
@@ -60,8 +68,7 @@ body {
   padding: 5px 15px;
 }
 
-.login:hover,
-.signup:hover {
+.login-signup-buttons a:hover button {
   transform: scale(1.2);
   background-color: #cbb2fe;
   color: white;
