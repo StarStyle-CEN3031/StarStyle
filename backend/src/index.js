@@ -12,7 +12,7 @@ const app = express();
 
 app.use(cors(
     {
-    origin: ["https://star-style-git-naydelin-teafanys-projects.vercel.app"],
+    origin: ["https://star-style-git-naydelin-teafanys-projects.vercel.app", "https://star-style.vercel.app"],
     methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
