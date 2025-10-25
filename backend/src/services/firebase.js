@@ -3,9 +3,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-console.log("private key:", process.env.FIREBASE_PRIVATE_KEY);
-console.log("All env keys:", Object.keys(process.env));
-
 const serviceAccount = {
     project_id: process.env.FIREBASE_PROJECT_ID,
     private_key_id: process.env.FIREBASE_PRIVATE_KEY_ID,
