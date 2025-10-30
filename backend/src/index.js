@@ -5,6 +5,9 @@ import connectDB from './config/mongodb.js'; //config/db.mjs
 import verifyToken from './middleware/authenticate.js';
 import User from './model/User.js'
 import dotenv from 'dotenv';
+import outfitRoutes from './routes/outfits.js';
+import celebrityRoutes from './routes/celebrities.js';
+import { connect } from 'mongoose';
 
 dotenv.config(); //config/index.mjs
 
@@ -57,6 +60,10 @@ app.post("/api/protected", verifyToken, async(req, res) => {
 
     res.send(user);
 }); 
+
+// routes
+app.use('/outfits', outfitRoutes);
+app.use('/celebrities', celebrityRoutes);
 
 // Health check
 app.get('/health', (req, res) => {

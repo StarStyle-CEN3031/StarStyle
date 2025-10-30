@@ -69,6 +69,14 @@ async function seedDB() {
     await Outfit.insertMany(outfits);
     console.log('Seeded 100 outfits and 5 celebrities!');
 
+    // update celebrities with outfit references
+    for (const celebId of celebIds) {
+      const celebOutfits = await Outfit.find({ celebrityId: celebId }).select('_id');
+      const outfitIds = celebOutfits.map(outfit => outfit._id);
+      await Celebrity.updateOne({ _id: celebId }, { $set: { outfits: outfitIds } });
+    }
+    console.log('Updated celebrity outfit references');
+
     // seed sample closet items
     const sampleItems = Array.from({ length: 20 }, () => ({
       userId: null,
